@@ -1,0 +1,89 @@
+Banco de dados contendo no mínimo: 1 relacionamento 1 para 1 1 relacionamento 1 para muitos 1 relacionamento muitos para muitos 
+Um campo do tipo Date/Timestamp 
+Página de about com nome e foto dos integrantes do grupo
+
+
+
+-CSS (NO AGUARDO)
+
+-Comentarios de cada post (NÃO IMPLEMENTADO)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ARQUIVO HOME.JSP
+<%--
+       <c:choose>    
+                <c:when test="${usuario==null}">  
+                    <b><p>Logue-se!</p></b>
+                </c:when>
+                <c:otherwise>
+                    <h1>Bem vindo ${usuario.nome_usuario}</h1>
+                    <h1>Escreva um post:</h1>            
+                    <form action="Controller" method="POST">
+                        <textarea name="texto" placeholder="No que está pensado?" required="required" COLS=40 ROWS=6></textarea>   
+                        <input type="hidden" name="command" value="usuario.postar"/>
+                        <a href="home.jsp"><input type="submit" value="Postar"/></a>
+                    </form>
+                    <c:choose>    
+                        <c:when test="${usuario.adm==true}">
+                           //PAINEL ADM
+                            <b><p>Painel do Administrador</p></b>
+                            //Excluir Usuario por nome (e seus posts juntos)
+                            <p>Apagar Usuário:</p>
+                            <form action="Controller" method="POST">
+                                <input type="text" name="username" placeholder="nome de usuário" required="required"/>
+                                <input type="hidden" name="command" value="usuario.admApagarUsuario"/>
+                                <input type="submit" value="Excluir Usuário"/>
+                            </form>
+                            <p>Apagar Post</p>
+                            <form action="Controller" method="POST">
+                                <input type="text" name="id_post" placeholder="id do post" required="required"/>
+                                <input type="hidden" name="command" value="usuario.admApagarPost"/>
+                                <input type="submit" value="Excluir Post"/>
+                            </form>
+                            //Excluir Post por ID
+                        </c:when>
+                    </c:choose> 
+                </c:otherwise>
+            </c:choose>            
+--%>    
+
+
+
+USUARIO BUSINESS
+
+
+/*
+            //PAINEL DE ADMINISTRADOR
+            if (command.endsWith("admApagarUsuario")) {
+                String nome = request.getParameter("username");
+                //if (nome == ((Usuario) request.getSession().getAttribute("usuario")).getNome_usuario()) {
+                    //Erro, Tentou se apagar
+                  //  request.getSession().setAttribute("erromsg", "Impossível apagar-se enquanto logado!");
+                //} else {
+                    usuariodao.delete(usuariodao.readByName(nome));
+                //}
+            }
+  */ 
+            
+            

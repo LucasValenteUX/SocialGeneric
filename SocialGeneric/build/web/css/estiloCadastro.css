@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/05/2016, 21:48:52
+    Author     : Lucas
+*/
+
+body{
+    background-color: #fff;    
+}
+
+.titleCadastro{
+    text-align: center;
+    color: #000;
+}
+
+.formCadastro{
+    width: 100%;
+    max-width: 400px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+}
+
+form input{
+    color: #d1d1d4;
+}

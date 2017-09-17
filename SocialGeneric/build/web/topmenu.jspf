@@ -1,0 +1,67 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+
+ 
+<header class="navbar-fixed">
+    <nav class="black">
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href="javascript:void(0)"</a>
+                    <i class="material-icons">dehaze</i>
+                </li>                
+                <li>
+                    <a href="index.jsp" class="btn black">MOOD</a>                    
+                </li> 
+            </ul>
+            <ul  class="right">
+                <li>
+                    <c:choose>                
+                        <c:when test="${usuario==null}">
+                            <form action="Controller" method="POST">
+                                <div class="row">
+                                    <div class="col s4">
+                                    <input type="text" name="username" placeholder="Username" required="required"/>
+                                    </div>
+                                    <div class="col s4">
+                                    <input type="password" name="password" placeholder="Password" required="required"/>
+                                    </div>
+                                    <input type="hidden" name="command" value="usuario.login"/>
+                                    <div class="col s1">
+                                    <input class="btn waves-orange orange" type="submit" value="LOGIN"/>
+                                    </div>
+                                </div>
+                            </form>                                  
+                            <li>
+                                <a class="btn blue" href="cadastro.jsp">Register</a>
+                            </li>
+                            <li>
+                                <a class="btn black"  href="about.jsp">About</a>
+                            </li> 
+                        </c:when>
+
+                        <c:otherwise>
+                             <div class="row">
+                                    <div class="col s4">
+                                        <form action="Controller" method="POST">
+                                           <a href="home.jsp"><i class="material-icons">create</i></a>                                           
+                                        </form> 
+                                    </div>
+                                    <div class="col s4">
+                                    <form action="Controller" method="POST">
+                                    <a class="grey btn left-align"><input type="submit" value="Logout"/></a>
+                                           <input type="hidden" name="command" value="usuario.logout"/>
+                                     </form> 
+                                    </div>                                    
+                                </div>
+                        </c:otherwise>
+                    </c:choose>
+                </li>                
+            </ul>     
+        </div>
+    </nav>
+</header>    
+    
+    
+    
+
